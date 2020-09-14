@@ -10,8 +10,14 @@ fn main() {
     values.sort();
 
     for x in queries.iter() {
-        let mut temp : i32;
+        let temp : i32;
         temp = binary_search::binary_search(&values, *x);
-        println!("{}", temp);
+
+        if temp == -1{
+            println!("Not Found")
+        }
+        else {
+            println!("{}", temp);
+        }
     }
 }
